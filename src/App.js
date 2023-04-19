@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 //importing the custom component we made
-import ExpenseItem from "./components/ExpenseItem";
+import ExpenseItem from "./CustomComponents/ExpenseItem";
 function App() {
   const LocationOfExpenditure = [
     {
