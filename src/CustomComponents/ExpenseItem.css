@@ -1,0 +1,40 @@
+.Card{
+    box-sizing: border-box;
+    background-color: rgb(99, 170, 19);
+    text-align: left;
+}
+
+.items{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    background-color:rgb(122, 116, 240);
+    border-radius: 5px;
+    box-shadow: 0 8px 10px rgb(0, 0, 0);
+    padding-bottom: 2%;
+}
+.Title{
+    font-display: large;
+}
+.date{
+    margin-top: 1%;
+    padding-top: 2%;
+    padding-left: 2%;
+    text-align: left;
+    font-size: 10px;
+}
+.rate{
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-right: 5%;
+    margin-left: 85%;
+    padding-left: 3%;
+    background-color: rgb(245, 166, 192);
+    border-radius: 5px;
+    box-shadow: 0 5px 8px black;
+}
+h2 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
