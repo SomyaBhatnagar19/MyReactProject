@@ -6,19 +6,19 @@ function App() {
     {
       id: "e1",
       title: "Food",
-      amount: 10,
+      amount: 'Rs. 10',
       date: new Date(2020, 7, 14),
     },
     {
       id: "e2",
       title: "Petrol",
-      amount: 50,
+      amount: 'Rs. 50',
       date: new Date(2021, 2, 12),
     },
     {
       id: "e3",
       title: "Movie",
-      amount: 100,
+      amount: 'Rs. 100',
       date: new Date(2021, 2, 28),
     },
   ];
