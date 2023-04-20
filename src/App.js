@@ -1,28 +1,28 @@
 import logo from "./logo.svg";
 import "./App.css";
-//importing the custom component we made
 import ExpenseItem from "./CustomComponents/ExpenseItem";
 function App() {
-  const LocationOfExpenditure = [
+  const LocationOfExpense = [
     {
       id: "e1",
       title: "Food",
-      amount: "10",
+      amount: 10,
       date: new Date(2020, 7, 14),
     },
     {
       id: "e2",
       title: "Petrol",
-      amount: "50",
+      amount: 50,
       date: new Date(2021, 2, 12),
     },
     {
       id: "e3",
       title: "Movie",
-      amount: "100",
+      amount: 100,
       date: new Date(2021, 2, 28),
     },
   ];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -41,22 +41,22 @@ function App() {
           Expense Items:-
         </a>
       </header>
-
       <ExpenseItem
-        title={LocationOfExpenditure[0].title}
-        amount={LocationOfExpenditure[0].amount}
-        date={LocationOfExpenditure[0].date}
-      ></ExpenseItem>
+        title={LocationOfExpense[0].title}
+        amount={LocationOfExpense[0].amount}
+        date={LocationOfExpense[0].date}
+      />
       <ExpenseItem
-        title={LocationOfExpenditure[1].title}
-        amount={LocationOfExpenditure[1].amount}
-        date={LocationOfExpenditure[1].date}
-      ></ExpenseItem>
+        title={LocationOfExpense[1].title}
+        amount={LocationOfExpense[1].amount}
+        date={LocationOfExpense[1].date}
+      />
       <ExpenseItem
-        title={LocationOfExpenditure[2].title}
-        amount={LocationOfExpenditure[2].amount}
-        date={LocationOfExpenditure[2].date}
-      ></ExpenseItem>
+        title={LocationOfExpense[2].title}
+        amount={LocationOfExpense[2].amount}
+        date={LocationOfExpense[2].date}
+      />
+      
     </div>
   );
 }
