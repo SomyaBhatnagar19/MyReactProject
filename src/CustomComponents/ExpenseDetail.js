@@ -1,14 +1,16 @@
-import App from "../App";
+// import App from "../App";
+import Card from "./Card";
+import './ExpenseItem.css';
 function ExpenseDetail(props) {
   return (
-    <div>
+    <Card>
       <div className="expense-item_description">
         <h2>{props.title}</h2>
       </div>
       <div classname='expense-item_price'>
         <h2>{props.amount}</h2>
       </div>
-    </div>
+    </Card>
   );
 }
 export default ExpenseDetail;
