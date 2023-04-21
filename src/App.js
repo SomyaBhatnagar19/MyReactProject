@@ -1,24 +1,24 @@
 import logo from "./logo.svg";
 import "./App.css";
-import ExpenseItem from "./CustomComponents/ExpenseItem";
-function App() {
+import ExpenseItem from "./CustomComponents/Expenses/ExpenseItem";
+const App = () => {
   const LocationOfExpense = [
     {
       id: "e1",
       title: "Food",
-      amount: 'Rs. 10',
+      amount: "Rs. 10",
       date: new Date(2020, 7, 14),
     },
     {
       id: "e2",
       title: "Petrol",
-      amount: 'Rs. 50',
+      amount: "Rs. 50",
       date: new Date(2021, 2, 12),
     },
     {
       id: "e3",
       title: "Movie",
-      amount: 'Rs. 100',
+      amount: "Rs. 100",
       date: new Date(2021, 2, 28),
     },
   ];
@@ -56,9 +56,7 @@ function App() {
         amount={LocationOfExpense[2].amount}
         date={LocationOfExpense[2].date}
       />
-      
     </div>
   );
 }
-
 export default App;

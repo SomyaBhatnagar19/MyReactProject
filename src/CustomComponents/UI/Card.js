@@ -1,5 +1,5 @@
 import './Card.css';
-import './ExpenseItem.css';
+import '../Expenses/ExpenseItem.css';
 //making a wrapper for the items
 function Card(props) {
     const  classes = 'card' + props.className;
