@@ -1,5 +1,6 @@
-import logo from "./logo.svg";
+
 import "./App.css";
+import Card from "./CustomComponents/UI/Card";
 import ExpenseItem from "./CustomComponents/Expenses/ExpenseItem";
 const App = () => {
   const LocationOfExpense = [
@@ -7,7 +8,7 @@ const App = () => {
       id: "e1",
       title: "Food",
       amount: "Rs. 10",
-      date: new Date(2020, 7, 14),
+      date: new Date(2023, 7, 14),
     },
     {
       id: "e2",
@@ -24,24 +25,12 @@ const App = () => {
   ];
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React <br></br>
-          Expense Items:-
-        </a>
-      </header>
-      <ExpenseItem
+    <Card>
+      <h5 style = {{ marginTop: "0.5rem", textAlign: "center"}}>
+        Expense List:-
+      </h5>
+      <ExpenseItem location = {LocationOfExpense}/>
+      {/* <ExpenseItem
         title={LocationOfExpense[0].title}
         amount={LocationOfExpense[0].amount}
         date={LocationOfExpense[0].date}
@@ -55,8 +44,9 @@ const App = () => {
         title={LocationOfExpense[2].title}
         amount={LocationOfExpense[2].amount}
         date={LocationOfExpense[2].date}
-      />
-    </div>
+      /> */}
+    </Card>
+    
   );
 }
 export default App;

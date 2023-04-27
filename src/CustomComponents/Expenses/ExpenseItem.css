@@ -1,47 +1,18 @@
-/* style sheet for expense items */
-.card {
-  border-radius: 12px;
-  background-color: black;
-  box-shadow: 0 1px 10px rgba(7, 7, 7, 0.25);
-}
-.expense-item {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  background-color: rgb(122, 116, 240);
-  border-radius: 5px;
-  box-shadow: 0.5rem 10px 10px rgb(0, 0, 0);
-  padding-bottom: 2%;
-}
-.expense-item_description {
-  font-display: large;
-}
-/* .expense-item_price {
-  margin-top: 5px;
-  margin-bottom: 2px;
-  margin-right: 5%;
-  margin-left: 70%;
-
-  background-color: rgb(245, 166, 192);
-  border-radius: 5px;
-  box-shadow: 0 5px 8px black;
-} */
-.expense-item_price {
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: #693083;
-    border: 1px solid white;
+.expense-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px black;
     padding: 0.5rem;
-    border-radius: 12px;
-    font-size: 1rem;
-    margin-left: 70%;
-    margin-right: 10%;
-  }
-h2 {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    margin: 1rem 0;
+    border-radius: 10px;
+    background-color: #4b4b4b;
 }
-
+button{
+    background-color: crimson;
+    border-color: black;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: pink;
+}

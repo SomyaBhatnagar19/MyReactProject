@@ -1,8 +1,8 @@
 import './Card.css';
-import '../Expenses/ExpenseItem.css';
+import React from 'react';
 //making a wrapper for the items
 function Card(props) {
-    const  classes = 'card' + props.className;
+    const  classes = "Card container " + props.className;
     return (
         <div className={classes}>{props.children}</div>
     );
