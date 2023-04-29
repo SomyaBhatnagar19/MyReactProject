@@ -8,11 +8,26 @@
     border-radius: 10px;
     background-color: #4b4b4b;
 }
-button{
+.submitBtn{
     background-color: crimson;
     border-color: black;
     border-radius: 5px;
 }
-button:hover{
+.submitBtn:hover{
     background-color: pink;
+}
+.updateBtn{
+    background-color: rgb(71, 187, 42);
+    border-radius: 5px;
+    border-color: black;
+}
+.updateBtn:hover{
+    background-color: rgb(76, 128, 63);
+}
+.ChangeTitle{
+    border-radius: 5px;
+    border-color: black;
+}
+.ChangeTitle:hover{
+    background-color: rgb(114, 117, 117);
 }
