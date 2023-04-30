@@ -1,7 +1,7 @@
-
 import "./App.css";
 import Card from "./CustomComponents/UI/Card";
 import ExpenseItem from "./CustomComponents/Expenses/ExpenseItem";
+import ExpenseForm from "./CustomComponents/NewExpense/ExpenseForm";
 const App = () => {
   const LocationOfExpense = [
     {
@@ -25,13 +25,15 @@ const App = () => {
   ];
 
   return (
-    <Card>
-      <h5 style = {{ marginTop: "0.5rem", textAlign: "center"}}>
-        Expense List:-
-      </h5>
-      <ExpenseItem location = {LocationOfExpense}/>
-    </Card>
-    
+    <div>
+      <ExpenseForm/>
+      <Card>
+        <h5 style={{ marginTop: "0.5rem", textAlign: "center" }}>
+          Expense List:-
+        </h5>
+        <ExpenseItem location={LocationOfExpense} />
+      </Card>
+    </div>
   );
-}
+};
 export default App;
