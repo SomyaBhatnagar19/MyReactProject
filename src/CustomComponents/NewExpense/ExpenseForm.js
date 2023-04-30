@@ -3,19 +3,44 @@ import Card from "../UI/Card";
 import "./ExpenseForm.css";
 const ExpenseForm = () => {
   //defining states
-  const [enteredTitle, setEnteredTitle] = useState('');
-  const [enteredAmount, setEnteredAmount] = useState('');
-  const [enteredDate, setEnteredDate] = useState('');
+  // const [enteredTitle, setEnteredTitle] = useState('');
+  // const [enteredAmount, setEnteredAmount] = useState('');
+  // const [enteredDate, setEnteredDate] = useState('');
+
+  //one state object rather than 3 state slices
+  const [userInput, setUserInput] = useState({
+    enteredTitle: '',
+    enteredAmount: '',
+    enteredDate: ''
+  });
   const handleTitleChange = (event) => {
-    setEnteredTitle(event.target.value);
+    // setUserInput({
+    //   ...userInput, //done so that those data are not lost
+    //   enteredTitle: event.target.value,
+    // })
+    setUserInput((prevState)=>{
+      return {...prevState, enteredTitle: event.target.value};
+    })
   };
 
   const handleAmountChange = (event) => {
-    setEnteredAmount(event.target.value);
+    // setUserInput({
+    //   ...userInput, 
+    //   enteredAmount: event.target.value,
+    // })
+    setUserInput((prevState)=>{
+      return {...prevState, enteredAmount: event.target.value};
+    })
   };
 
   const handleDateChange = (event) => {
-    setEnteredDate(event.target.value);
+    // setUserInput({
+    //   ...userInput, 
+    //   enteredDate: event.target.value,
+    // })
+    setUserInput((prevState)=>{
+      return {...prevState, enteredDate: event.target.value};
+    })
   };
   //form for input
   return (
