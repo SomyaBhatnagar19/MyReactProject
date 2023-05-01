@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "../UI/Card";
 import "./ExpenseForm.css";
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   //defining states
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
@@ -55,7 +55,11 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: new Date(enteredDate)
     };
-    console.log(expenseData);
+    // console.log(expenseData);
+    props.onSaveExpenseData(expenseData);
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
   }
   //form for input
   return (
@@ -67,10 +71,22 @@ const ExpenseForm = () => {
       </div>
       <form onSubmit={submitHandler}>
         <label htmlFor="title">Title : </label> &nbsp;
-        <input type="text" id="title" placeholder="Expense Title" onChange={handleTitleChange} value={enteredTitle}/>
+        <input 
+          type="text" 
+          id="title" 
+          placeholder="Expense Title" 
+          value={enteredTitle}
+          onChange={handleTitleChange} 
+          />
         &nbsp;&nbsp;
         <label htmlFor="amount">Amount : </label> &nbsp;
-        <input type="number" id="amount" placeholder="Select Expense Amount" onChange={handleAmountChange} value={enteredAmount}/>
+        <input 
+          type="number" 
+          id="amount" 
+          placeholder="Select Expense Amount" 
+          value={enteredAmount}
+          onChange={handleAmountChange} 
+          />
         &nbsp;&nbsp;
         <label htmlFor="date">Date : </label> &nbsp;
         <input
@@ -78,8 +94,8 @@ const ExpenseForm = () => {
           id="date"
           placeholder="Select Expense Date"
           min="2023-01-01"
-          onChange={handleDateChange}
           value={enteredDate}
+          onChange={handleDateChange}
         />
         <br></br>
         <button type="submit" className="form-submit">

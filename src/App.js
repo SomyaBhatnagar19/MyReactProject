@@ -1,9 +1,12 @@
 import "./App.css";
 import Card from "./CustomComponents/UI/Card";
 import ExpenseItem from "./CustomComponents/Expenses/ExpenseItem";
-import ExpenseForm from "./CustomComponents/NewExpense/ExpenseForm";
+// import ExpenseForm from "./CustomComponents/NewExpense/ExpenseForm";
+import NewExpense from './CustomComponents/NewExpense/NewExpense';
+import React, { useState } from "react";
 const App = () => {
-  const LocationOfExpense = [
+  // const [LocationofExpense, setExpenses] = useState([
+    const LocationofExpense = [
     {
       id: "e1",
       title: "Food",
@@ -24,16 +27,25 @@ const App = () => {
     },
   ];
 
-  return (
-    <div>
-      <ExpenseForm/>
-      <Card>
-        <h5 style={{ marginTop: "0.5rem", textAlign: "center" }}>
-          Expense List:-
-        </h5>
-        <ExpenseItem location={LocationOfExpense} />
-      </Card>
-    </div>
-  );
+  const [expenses, setExpenses] = useState(LocationofExpense);
+  const addExpenseHandler = (expenses) => {
+    // console.log('In App.js');
+    // console.log(LocationofExpense);
+    setExpenses((prevExpenses) => {
+      return [...prevExpenses, LocationofExpense];
+    });
 };
+
+return (
+  <div>
+    <NewExpense onAddExpense={addExpenseHandler} />
+    <Card>
+      <h5 style={{ marginTop: "0.5rem", textAlign: "center" }}>
+        Expense List:-
+      </h5>
+      <ExpenseItem location={expenses} />
+    </Card>
+  </div>
+)
+}
 export default App;
