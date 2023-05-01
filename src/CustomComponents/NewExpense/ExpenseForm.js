@@ -171,7 +171,7 @@ const ExpenseForm = (props) => {
           type="date"
           id="date"
           placeholder="Select Expense Date"
-          min="2023-01-01"
+          min="2020-01-01"
           value={enteredDate}
           onChange={handleDateChange}
         />

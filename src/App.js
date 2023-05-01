@@ -4,6 +4,7 @@ import ExpenseItem from "./CustomComponents/Expenses/ExpenseItem";
 // import ExpenseForm from "./CustomComponents/NewExpense/ExpenseForm";
 import NewExpense from "./CustomComponents/NewExpense/NewExpense";
 import React, { useState } from "react";
+import ExpenseFilter from "./CustomComponents/ExpenseFilter";
 const App = () => {
   const [LocationofExpense, setExpenses] = useState([
     {
@@ -34,16 +35,30 @@ const App = () => {
     console.log(LocationofExpense);
   };
 
+  const [filteredYear, setFilteredYear] = useState("2022");
+  const handleFilterChange = (selectedYear) => {
+    setFilteredYear(selectedYear);
+  };
+
+  const filteredExpenses = LocationofExpense.filter((expense) => {
+    return expense.date.getFullYear().toString() === filteredYear;
+  });
+
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
+
       <Card>
+        <ExpenseFilter
+          selectedYear={filteredYear}
+          onFilterChange={handleFilterChange}
+        />
         <h5 style={{ marginTop: "0.5rem", textAlign: "center" }}>
           Expense List:-
         </h5>
         <ExpenseItem location={LocationofExpense} />
       </Card>
     </div>
-  )
+  );
 };
 export default App;
