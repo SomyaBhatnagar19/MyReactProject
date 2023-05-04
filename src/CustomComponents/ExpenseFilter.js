@@ -6,16 +6,24 @@ const ExpenseFilter = (props) => {
         props.onFilterChange(event.target.value);
 }
     return (
-        <div className="Card-container"
+        <div className="container"
         style={{margin:"20px"}}>
-        <div className="border border-dark card card-body bg-dark text-light"   >
-                <label> Filter by year : </label>
-            <select onChange={handleYearChange}>
+        <div >
+                <label> Filter by year : </label> <br></br>
+            <select 
+            onChange={handleYearChange}
+            style={{margin:'20px',width: '90%'}}
+            >
                 <option value=" ">All</option>
                 <option value="2023"> 2023 </option>
                 <option value="2022"> 2022 </option>
                 <option value="2021"> 2021 </option>
             </select>
+            <button
+            className="btn btn-success border-black"
+            >
+                Selected Year</button>
+            <hr></hr>
             </div>
             </div>
     );
