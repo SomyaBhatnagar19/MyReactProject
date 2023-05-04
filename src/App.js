@@ -45,6 +45,10 @@ const App = () => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
+  let newExpenses = <p>No expense found</p>
+  if(filteredExpenses.length > 0){
+    newExpenses = <ExpenseItem location={filteredExpenses} />
+  }
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
@@ -55,8 +59,9 @@ const App = () => {
         <h5 style={{ marginTop: "0.5rem", textAlign: "center" }}>
           Expense List:-
         </h5>
-        {/* <ExpenseItem location={LocationofExpense} /> */}
-         <ExpenseItem location={filteredExpenses} />
+        {/* {filteredExpenses.length === 0 && <p>No Expense Found</p>}
+        {filteredExpenses.length > 0 && <ExpenseItem location={filteredExpenses} />} */}
+         {newExpenses}
          
       </Card>
     </div>
