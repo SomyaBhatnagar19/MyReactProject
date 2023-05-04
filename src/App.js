@@ -1,10 +1,11 @@
 import "./App.css";
 import Card from "./CustomComponents/UI/Card";
-import ExpenseItem from "./CustomComponents/Expenses/ExpenseItem";
+// import ExpenseItem from "./CustomComponents/Expenses/ExpenseItem";
 // import ExpenseForm from "./CustomComponents/NewExpense/ExpenseForm";
 import NewExpense from "./CustomComponents/NewExpense/NewExpense";
 import React, { useState } from "react";
 import ExpenseFilter from './CustomComponents/ExpenseFilter';
+import ExpensesList from "./CustomComponents/Expenses/ExpensesList";
 const App = () => {
   const [LocationofExpense, setExpenses] = useState([
     {
@@ -45,10 +46,7 @@ const App = () => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
-  let newExpenses = <p>No expense found</p>
-  if(filteredExpenses.length > 0){
-    newExpenses = <ExpenseItem location={filteredExpenses} />
-  }
+  
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
@@ -61,7 +59,8 @@ const App = () => {
         </h5>
         {/* {filteredExpenses.length === 0 && <p>No Expense Found</p>}
         {filteredExpenses.length > 0 && <ExpenseItem location={filteredExpenses} />} */}
-         {newExpenses}
+        {/* {newExpenses} */}
+        <ExpensesList location = {filteredExpenses}/>
          
       </Card>
     </div>
