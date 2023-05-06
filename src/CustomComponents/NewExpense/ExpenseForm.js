@@ -142,6 +142,11 @@ const ExpenseForm = (props) => {
     setEnteredDate("");
   };
 
+  const cancelHandler = () => {
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
+  };
   return (
     <Card>
       <h5>Add Expenses:- </h5>
@@ -176,6 +181,10 @@ const ExpenseForm = (props) => {
           onChange={handleDateChange}
         />
         <br></br>
+        <button type="submit" className="cancel-btn"  onClick={cancelHandler}>
+          Cancel
+        </button>
+
         <button type="submit" className="form-submit">
           Add Expense
         </button>
